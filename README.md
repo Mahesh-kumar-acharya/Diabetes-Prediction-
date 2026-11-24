@@ -1,4 +1,3 @@
-# Diabetes-Prediction-
 # Diabetes Risk Assessment
 
 > A decision-tree classifier that predicts diabetes risk from eight clinical features — wrapped in a deliberately quiet, editorial Flask frontend.
@@ -56,7 +55,7 @@ No gradients. No dark mode. No neon. If it looks like a print journal, that's th
 ## Run it
 
 ```bash
-git clone https://github.com/Mahesh-kumar-acharya/Diabetes-Prediction-
+git clone <your-repo-url>
 cd Diabetes-Prediction
 
 pip install flask scikit-learn pandas joblib
@@ -68,7 +67,7 @@ python train_save.py
 python app.py
 ```
 
-Open `https://6f7l8kgc-5000.inc1.devtunnels.ms/`.
+Open `http://127.0.0.1:5000`.
 
 ---
 
