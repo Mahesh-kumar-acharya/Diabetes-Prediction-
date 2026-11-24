@@ -58,16 +58,19 @@ No gradients. No dark mode. No neon. If it looks like a print journal, that's th
 git clone <your-repo-url>
 cd Diabetes-Prediction
 
-pip install flask scikit-learn pandas joblib
+pip install -r requirements.txt
 
 # (re)train the model — saves to model/diabetes_tree.joblib
 python train_save.py
 
-# start the server
-python app.py
+# start the server (Flask dev server)
+python wsgi.py
+
+# ...or production (Render, etc.) — gunicorn reads wsgi:app
+gunicorn wsgi:app --bind 0.0.0.0:$PORT
 ```
 
-Open `http://127.0.0.1:5000`.
+> **Note for Windows:** `gunicorn` relies on Unix-only modules (`fcntl`) and won't run on Windows locally — use `python wsgi.py` there. On Render (Linux), `gunicorn wsgi:app --bind 0.0.0.0:$PORT` is the way.
 
 ---
 
