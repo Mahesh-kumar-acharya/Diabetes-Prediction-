@@ -55,7 +55,7 @@ No gradients. No dark mode. No neon. If it looks like a print journal, that's th
 ## Run it
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Mahesh-kumar-acharya/Diabetes-Prediction-
 cd Diabetes-Prediction
 
 pip install -r requirements.txt
